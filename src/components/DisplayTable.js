@@ -167,7 +167,7 @@ class DisplayTable extends React.Component{
                 </div>
                 </form>
             <pre>Click on the heading of the table,for instance -"app_id" to sort by app_id</pre>
-            <pre>Total number of field entries,averages have been calculated and inserted accordingly</pre>
+            <pre>Total number of UNIQUE field entries,averages have been calculated and inserted accordingly</pre>
             <pre>Total number of entries  -  {this.state.numberofrows}</pre>
             <table>
                 <thead>
