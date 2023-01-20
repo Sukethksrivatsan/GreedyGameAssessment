@@ -1,1 +1,4 @@
-
+<b>GreedyGame Assessment</b>
+Complete rendering of the table without using any backend and only React
+Utilization of the Fetch API inorder to obtain the data from multiple sources and process it into a table with many fields
+Implementing a Reusable Analytics Table Component with liberties given to the user to add/remove columns,sort/filter etc
