@@ -12,7 +12,9 @@ class DisplayTable extends React.Component{
         totalnumberofclicks:0,
         averagefillrate:0,
         averagectr:0,
-        visibleColumns:{column1:true,column2:true,column3:true,column4:true,column5:true,column6:true,column7:true,column8:true,column9:true,column10:true}
+        visibleColumns:{column1:true,column2:true,column3:true,column4:true,column5:true,column6:true,column7:true,column8:true,column9:true,column10:true},
+        uniquesetids:new Set(),
+        uniquenames:new Set()
     }
         this.toggleColumnVisibility = this.toggleColumnVisibility.bind(this);
         this.getData=this.getData.bind(this);
@@ -95,6 +97,8 @@ class DisplayTable extends React.Component{
             let averagefillrate=0;
             let averagectr=0;
         this.state.list.map((item)=>{
+            this.state.uniquesetids.add(item.app_id)
+            this.state.uniquenames.add(item.app_name)
             count+=1;
             console.log(item.impressions);
             totalnumberofimpressions+=item.impressions;
@@ -164,11 +168,12 @@ class DisplayTable extends React.Component{
                 </form>
             <pre>Click on the heading of the table,for instance -"app_id" to sort by app_id</pre>
             <pre>Total number of field entries,averages have been calculated and inserted accordingly</pre>
+            <pre>Total number of entries  -  {this.state.numberofrows}</pre>
             <table>
                 <thead>
                 <tr>
-                    <th onClick={() => this.sortData("app_id")} style={{ display: this.state.visibleColumns.column1 ? 'table-cell' : 'none' }}>App ID {this.state.numberofrows}</th>
-                    <th onClick={() => this.sortData("app_name")} style={{ display: this.state.visibleColumns.column2 ? 'table-cell' : 'none' }}>App Names-{this.state.numberofrows}</th>
+                    <th onClick={() => this.sortData("app_id")} style={{ display: this.state.visibleColumns.column1 ? 'table-cell' : 'none' }}>App ID {this.state.uniquesetids.size}</th>
+                    <th onClick={() => this.sortData("app_name")} style={{ display: this.state.visibleColumns.column2 ? 'table-cell' : 'none' }}>App Names-{this.state.uniquenames.size}</th>
                     <th onClick={() => this.sortData("date")} style={{ display: this.state.visibleColumns.column3 ? 'table-cell' : 'none' }}>Dates-{this.state.numberofrows}</th>
                     <th onClick={() => this.sortData("requests")} style={{ display: this.state.visibleColumns.column4 ? 'table-cell' : 'none' }}>Requests-{this.state.totalnumberofrequests}</th>
                     <th onClick={() => this.sortData("responses")} style={{ display: this.state.visibleColumns.column5 ? 'table-cell' : 'none' }}>Responses-{this.state.totalnumberofresponses}</th>
