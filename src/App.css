@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+.CalendarWrap{
+    display: inline-block;
+    position: relative;
+}
+
+#defaultperiod{
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.calendarelement{
+position:absolute;
+left:50%;
+transform:translateX(-50%);
+top:40x;
+border:1px solid white;
+z-index: 999;
+}
+h1{
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+h2{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+.tableheading{
+    text-align: center;
+    font-size: large;
+    font-weight:bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+*{
+    background-color: rgb(29, 8, 70);
+    color:aliceblue;
+    padding:0;
+    font-family: 'Montserrat', sans-serif;
+} 

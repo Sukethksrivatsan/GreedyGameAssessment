@@ -1,0 +1,32 @@
+table, th, td {
+    border: 1px solid;
+    width:fit-content;
+    margin-left:50px;
+  }
+pre{
+    text-align: center;
+}
+#togglebuttons{
+    width: fit-content;
+    text-align: center;
+}
+#formbutton{
+    color:black;
+  display: block;
+  text-align: center;
+  width: 100%;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight:bold;
+  border: none;
+  background-color: #f9fdfc;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+label{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight:bold;
+    margin-left:200px;
+    margin-right:200px;
+}
